@@ -19,6 +19,7 @@ The following **extensions** are implemented:
 * [x] Incorporate the Yelp-branded stars when showing ratings.
 * [x] Display the Yelp icon in the Action Bar.
 * [x] Add search functionality to allow the user to query beyond the hard-coded initial screen, using the Yelp icon as a menu item.
+* [x] Ellipsize the restaurant name if it's too long. (Additionally align the bottom edges of the restaurant name and distance.)
 
 ## Video Walkthrough
 
