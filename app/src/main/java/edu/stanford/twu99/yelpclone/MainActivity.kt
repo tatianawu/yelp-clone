@@ -18,8 +18,6 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-private const val API_KEY =
-    "jEE60QI7eLJGXd1ksgJxIKm35-f8VzsUYpeg76CBr8492ayLVuoM7HoxQ7W6gn6X_LtnPW8vJ1-o1_l24D3scWnRZxj5nf3uGndITtEgQ_ITsqHIQWW8xSmW13HAXnYx"
 private const val BASE_URL = "https://api.yelp.com/v3/"
 private const val INIT_TERM = "Avocado Toast"
 private const val INIT_LOC = "New York"
@@ -94,7 +92,7 @@ class MainActivity : AppCompatActivity() {
             Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create())
                 .build()
         val yelpService = retrofit.create(YelpService::class.java)
-        yelpService.searchRestaurants("Bearer $API_KEY", term, location)
+        yelpService.searchRestaurants("Bearer ${BuildConfig.API_KEY}", term, location)
             .enqueue(object : Callback<YelpSearchResult> {
                 override fun onResponse(
                     call: Call<YelpSearchResult>,

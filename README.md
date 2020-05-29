@@ -6,6 +6,12 @@
 
 Time spent: **6** hours spent in total
 
+## Instruction
+To run the project, add your API key in your local `gradle.properties` file.
+```
+API_KEY="YourSecretAPIKey"
+```
+
 ## Functionality 
 
 The following **required** functionality is completed:
